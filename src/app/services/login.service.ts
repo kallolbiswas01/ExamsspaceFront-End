@@ -13,6 +13,8 @@ export class LoginService extends CommonService {
     super();
   }
 
+  public url = "http://18.217.236.69:8080/Api/core/login/";
+
    /**
    * funcation name:
    * craeted by:
@@ -20,6 +22,7 @@ export class LoginService extends CommonService {
    * functionality:
    */
   public loginUser(reqObj){
-    return this.http.post(`${this.getAppBaseUrl()}${'api/user/login'}`,reqObj,this.getConfig())
+
+    return this.http.post(`${this.getAppBaseUrl()}${this.url}`,reqObj,this.getConfig())
   }
 }
