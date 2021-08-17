@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -15,6 +17,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgbModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
