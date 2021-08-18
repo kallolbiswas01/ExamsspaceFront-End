@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AssessmentComponent } from './assessment/assessment.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -21,7 +22,8 @@ import { AssessmentComponent } from './assessment/assessment.component';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    AssessmentComponent
+    AssessmentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
