@@ -11,6 +11,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AssessmentComponent } from './assessment/assessment.component';
 
 
 
@@ -19,7 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    AssessmentComponent
   ],
   imports: [
     BrowserModule,
