@@ -32,7 +32,6 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
- 
     NgbModule
   ],
   providers: [

@@ -29,8 +29,7 @@
 
 							<br>
 							<ngb-tabset [destroyOnHide]="false">  
-    
-									<ngb-tab title="Corporate Login">  
+									<ngb-tab [title]="'Corporate Login'">  
 									  <ng-template ngbTabContent>  
 											<form [formGroup]="loginForm">
 													<input type="hidden" name="csrf" value="">
@@ -67,10 +66,7 @@
 			
 												</form> 
 									  </ng-template>  
-									</ngb-tab>  
-									   
-									
-									   
+									</ngb-tab>  								   
 							</ngb-tabset> 
 
 
