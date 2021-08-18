@@ -17,13 +17,14 @@ export class LoginComponent implements OnInit {
 
   private login() {
     this.loginForm = this.fb.group({
-      email: ["", Validators.required],
-      password: ["", Validators.required],
-      type: [""],
+      user_email: ["", Validators.required],
+      user_password: ["", Validators.required],
+      name : ["csrf"],
     });
   }
   public loginUser() {
     this.loginService.loginUser(this.loginForm.value).subscribe((data) => {
+      console.log('login', data)
     });
   }
 }

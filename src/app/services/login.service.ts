@@ -13,7 +13,7 @@ export class LoginService extends CommonService {
     super();
   }
 
-  public url = "http://18.217.236.69:8080/Api/core/login/";
+  public url = "Api/core/login/";
 
    /**
    * funcation name:
