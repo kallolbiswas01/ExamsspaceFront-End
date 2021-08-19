@@ -1,8 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { Validators, FormBuilder, FormGroup } from "@angular/forms";
 import { LoginService } from "../services/login.service";
 import { Router } from '@angular/router';
 import { SocialAuthService, GoogleLoginProvider,FacebookLoginProvider,SocialUser } from 'angularx-social-login';
+import { TabsetComponent, TabDirective } from 'ngx-bootstrap/tabs';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,9 @@ import { SocialAuthService, GoogleLoginProvider,FacebookLoginProvider,SocialUser
   styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent implements OnInit {
-
+export class LoginComponent implements OnInit, AfterViewInit {
+  disableSwitching: boolean;
+  @ViewChild('tabset') tabset: TabsetComponent;
   public loginForm : FormGroup;
   socialUser: SocialUser;
   isLoggedin: boolean;
@@ -35,6 +37,15 @@ export class LoginComponent implements OnInit {
     });
   }
 
+
+
+  ngAfterViewInit(){
+    console.log(this.tabset.tabs);
+  }
+
+  goto(id:any){
+    this.tabset.tabs[id].active = true;
+  }
   public loginUser() {
     this.router.navigateByUrl('dashboard');
 

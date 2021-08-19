@@ -29,10 +29,10 @@
 
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
 								<li class="nav-item">
-								  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Corporate Login</a>
+								  <a class="nav-link active" id="home-tab" data-toggle="tab"  data-target="#home" role="tab" aria-controls="home" aria-selected="true">Corporate Login</a>
 								</li>
 								<li class="nav-item">
-								  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Student Login</a>
+								  <a class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile"  role="tab" aria-controls="profile" aria-selected="false">Student Login</a>
 								</li>
 							
 							  </ul>
@@ -146,3 +146,27 @@
 		</div>
 	</div>
 </section>
+
+
+<tabset #tabset>
+	<tab
+	  heading="First tab"
+	  >Tab 1 content</tab>
+  
+	<tab
+	  heading="Second tab"
+	  >Tab 2 content</tab>
+  
+		<tab
+	  heading="Second tab"
+	  >Tab 2 content</tab>
+  
+		<tab
+	  heading="Second tab"
+	  >Tab 2 content</tab>
+  </tabset>
+  
+  <button (click)='goto(0)'>Go to 1</button>
+  <button (click)='goto(1)'>Go to 2</button>
+  <button (click)='goto(2)'>Go to 3</button>
+  <button (click)='goto(3)'>Go to 4</button>

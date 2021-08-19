@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 import {  SocialLoginModule,  SocialAuthServiceConfig,} from 'angularx-social-login';
 import {  GoogleLoginProvider,  FacebookLoginProvider,} from 'angularx-social-login';
@@ -33,6 +34,7 @@ import {  GoogleLoginProvider,  FacebookLoginProvider,} from 'angularx-social-lo
     FormsModule,
     NgbModule,
     SocialLoginModule,
+    TabsModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
