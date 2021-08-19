@@ -11,7 +11,7 @@ import { TabsetComponent, TabDirective } from 'ngx-bootstrap/tabs';
   styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent implements OnInit, AfterViewInit {
+export class LoginComponent implements OnInit {
   disableSwitching: boolean;
   @ViewChild('tabset') tabset: TabsetComponent;
   public loginForm : FormGroup;
@@ -37,15 +37,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
     });
   }
 
-
-
-  ngAfterViewInit(){
-    console.log(this.tabset.tabs);
-  }
-
-  goto(id:any){
-    this.tabset.tabs[id].active = true;
-  }
   public loginUser() {
     this.router.navigateByUrl('dashboard');
 
