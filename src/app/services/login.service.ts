@@ -13,7 +13,7 @@ export class LoginService extends CommonService {
     super();
   }
 
-  public url = "Api/core/login/";
+  public url = "api/user/login";
 
    /**
    * funcation name:

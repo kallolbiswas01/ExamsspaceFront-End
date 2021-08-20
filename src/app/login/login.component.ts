@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.fb.group({
-      user_email: ["", Validators.required],
-      user_password: ["", Validators.required],
-      name : ["csrf"],
+      email: ["", Validators.required],
+      password: ["", Validators.required],
+      //type : ["Corporate"],
     });
 
     this.socialAuthService.authState.subscribe((user) => {
