@@ -1,51 +1,75 @@
-body {
-	overflow: hidden;
-	margin: 0;
-	font-family: "Limelight", sans-serif;
-	text-rendering: optimizeLegibility;
+.wrapper {
+	// background:linear-gradient(#023466, #00152b);
+	background: url('https://media.istockphoto.com/photos/blue-gradient-soft-background-picture-id1138911015?k=6&m=1138911015&s=170667a&w=0&h=nVOiagSm1oHq5I9aYZV-oKlIniEfPp2XKF6n2JjBdaw=');
+	height: 100%;
+	background-size:100% 100%; 
+	width:100%;
+	background-attachment:cover; 
+	padding:20px 0 ;
+
+	.headerfix {
+		position: fixed;
+		background:#023466;
+		top: 0px;
+		width:100% ;
+		padding:20px ;
+		.menu {
+	
+			a {
+				color: #ffffff;
+				text-decoration: none;
+				padding:0 20px;
+			}
+		}
+	}
+	// .logo {
+	// 	// background: url('assets/img/delll.png');
+	// 	// background-size:100% 100%; 
+	// }
+	
 }
 
-.well {
-	position: relative;
-	overflow: hidden;
-	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
-}
+// .well {
+// 	position: relative;
+// 	overflow: hidden;
+// 	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+// }
 
-.top {
-	font-size: 80%;
-	color: hsla(0, 0%, 100%, .25);
-	position: relative;
-	top: -.2em;
-	cursor: pointer;
-}
+// .top {
+// 	font-size: 80%;
+// 	color: hsla(0, 0%, 100%, .25);
+// 	position: relative;
+// 	top: -.2em;
+// 	cursor: pointer;
+// }
 
-.panel {
-	position: relative;
-	height: 100vh;
-	overflow: hidden;
-	font-size: 10vmin;
-	padding: 1em;
-	box-sizing: border-box;
-	color: hsla(0, 0%, 100%, .1);
-	cursor: default;
-}
+// .panel {
+// 	position: relative;
+// 	height: 100vh;
+// 	overflow: hidden;
+// 	font-size: 10vmin;
+// 	padding: 1em;
+// 	box-sizing: border-box;
+// 	color: hsla(0, 0%, 100%, .1);
+// 	cursor: default;
+// }
 
-.panel:nth-child(1) {
-	background-image:url(https://i.imgur.com/8sip89G.png);
-}
+// .panel:nth-child(1) {
+// 	background-image:url(https://i.imgur.com/8sip89G.png);
+// }
 
-.panel:nth-child(2) {
-	background-image:url(https://i.imgur.com/fwMKHhd.png);
-}
+// .panel:nth-child(2) {
+// 	background-image:url(https://i.imgur.com/fwMKHhd.png);
+// }
 
-.panel:nth-child(3) {
-	background-image:url(https://i.imgur.com/ymSpeOM.png);
-}
+// .panel:nth-child(3) {
+// 	background-image:url(https://i.imgur.com/ymSpeOM.png);
+// }
 
-.panel:nth-child(4) {
-	background-image:url(https://i.imgur.com/QVgnqdJ.png);
-}
+// .panel:nth-child(4) {
+// 	background-image:url(https://i.imgur.com/QVgnqdJ.png);
+// }
 
-.panel:nth-child(5) {
-	background-image:url(https://i.imgur.com/vIUhtDB.png);
-}
+// .panel:nth-child(5) {
+// 	background-image:url(https://i.imgur.com/vIUhtDB.png);
+// }
