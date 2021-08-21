@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssessmentComponent implements OnInit {
 
+  public quizs = [
+    { "question" : "How many letters are there in 'JS' ?"},
+    {"options" : ['1', '2', '3', '4']},
+    { "question" : "How many letters are there in 'BMX'?"},
+    {"options" : ['1', '2', '3', '4']},
+    { "question" : "How many letters are there in 'A' ?"},
+    {"options" : ['1', '2', '3', '4']}
+   
+  ];
+
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.quizs);
   }
 
 }
