@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   public loginForm : FormGroup;
   socialUser: SocialUser;
   isLoggedin: boolean;
+  user: any;
   constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router,private socialAuthService: SocialAuthService) {}
 
   ngOnInit() {
@@ -42,10 +43,13 @@ public register(){
 }
 
   public loginUser() {
-    this.router.navigateByUrl('dashboard');
-
     this.loginService.loginUser(this.loginForm.value).subscribe((data) => {
       console.log('login', data)
+      let res = <any>data;
+      if(res.type === "success"){
+        this.user = res.data;
+        this.router.navigateByUrl('dashboard');
+      }
     });
   }
 

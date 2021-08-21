@@ -14,7 +14,9 @@
 
                     <li *ngFor="let quiz of quizs">
                       <h4> {{quiz.question}}</h4>
-                      <input type="radio" name="question0" value="B"><span>{{quiz.options}}</span>
+                      <p *ngFor="let opc of quiz.options">
+                      <input type="radio" name="question" value="B"><span>{{opc}}</span>
+                      </p>
                     </li>
                   </ul>
               
@@ -38,7 +40,7 @@
               <button class="btn btn-primary" >Next Question</button>
               
               <br><br><br>
-              <button class="view-results" onclick="returnScore()">View Results</button>
+              <button class="view-results">View Results</button>
               <span id="myresults" class="my-results">My results will appear here</span>
     </div>
     </div>
