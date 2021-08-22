@@ -1,3 +1,13 @@
-.body {
+.login-area {
+  // background:linear-gradient(to right #023466, #00152b);
+  // background:  #023466;
+  height:100% ;
+  .login-content {
     background: #ffffff;
+    border-radius: 50px;
+    width: 525px; 
+    height:500px ;
+    padding:40px ; 
+    box-shadow: 0 0 10px #ccc;
+  }
 }
