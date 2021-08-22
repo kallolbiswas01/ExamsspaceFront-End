@@ -14,8 +14,8 @@ export class CommonService {
    * functionality:
    */
   public getAppBaseUrl(){
-   // const baseUrl = 'http://localhost:3003/';
-    const baseUrl = 'http://18.217.236.69:3003/';
+    const baseUrl = 'http://localhost:3003/';
+   // const baseUrl = 'http://18.217.236.69:3003/';
     return baseUrl;
   }
 
