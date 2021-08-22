@@ -6,8 +6,12 @@
     background: #ffffff;
     border-radius: 50px;
     width: 525px; 
-    height:500px ;
+    height:550px ;
     padding:40px ; 
     box-shadow: 0 0 10px #ccc;
+    .form-control {
+      border: 1px solid #ccc;
+      margin-top:20px ;
+    }
   }
 }

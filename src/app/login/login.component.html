@@ -30,7 +30,7 @@
 										alt="image"></a>
 							</div>
 							<!-- <h3>Welcome back</h3> -->
-							<p>New to Class-Byte? <a href="register.html"  (click)="register()">Sign up</a></p>
+							
 							<tabset #tabset>
 								<tab heading="Corporate Login">
 
@@ -69,13 +69,17 @@
 								</tab>
 							</tabset>
 							<br>
+							<div class="mb-3 text-left">
+								<p>Don’ve have an account? <a href="register.html"  (click)="register()">Sign up</a></p>
+							</div>
 							<div class="connect-with-social">
 
-								<a href="javascript:void(0)" class="default-btn" (click)="loginUser()">
-									<i class='bx bx-lock icon-arrow before'></i>
+								<a href="javascript:void(0)" class="default-btn block" (click)="loginUser()" style="display:block">
+									<!-- <i class='bx bx-lock icon-arrow before'></i>
 									<span class="label">Login Now</span>
-									<i class="bx bx-user icon-arrow after"></i>
-								</a><br><br>
+									<i class="bx bx-user icon-arrow after"></i> -->
+									<span class="label">LOGIN NOW</span>
+								</a><br>
 
 								<div class="d-flex">
 									<a href="javascript:void(0)" style="width: 206px;"
