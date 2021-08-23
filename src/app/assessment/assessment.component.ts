@@ -8,6 +8,7 @@ import { AssessmentService } from './assessment.service';
 })
 export class AssessmentComponent implements OnInit {
   quizs: any;
+  quiz:any ;
   constructor(private assessmentService: AssessmentService) { }
   ngOnInit(): void {
     this.getAssessment()
@@ -19,8 +20,23 @@ export class AssessmentComponent implements OnInit {
       let res = <any>data;
       if(res.type === "success"){
         this.quizs = res.data;
+        this.quiz = this.quizs[0];
         //this.router.navigateByUrl('dashboard');
       }
     });
   }
+
+
+  previous() {
+    const currentIndex = this.quizs.indexOf(this.quiz);
+    const newIndex = currentIndex === 0 ? this.quizs.length - 1 : currentIndex - 1;
+    this.quiz = this.quizs[newIndex];
+};
+
+next() {
+    const currentIndex = this.quizs.indexOf(this.quiz);
+    const newIndex = currentIndex === this.quizs.length - 1 ? 0 : currentIndex + 1;
+    this.quiz = this.quizs[newIndex];
+};
+
 }

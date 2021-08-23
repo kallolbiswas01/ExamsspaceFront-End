@@ -12,12 +12,12 @@
 
 
 
-                    <li *ngFor="let quiz of quizs">
+                    <!-- <li *ngFor="let item of quiz"> -->
                       <h4> {{quiz.question}}</h4>
                       <p *ngFor="let opc of quiz.options">
                       <input type="radio" name="question" value="B"><span>{{opc}}</span>
                       </p>
-                    </li>
+                    <!-- </li> -->
                   </ul>
               
                   <!-- <h4>How many letters are there in "BMX"?</h4>
@@ -36,8 +36,8 @@
                     <li><input type="radio" name="question2" value="D"><span>4</span></li>
                   </ul> -->
                
-              <button class="btn btn-dark" >Previous Question</button>
-              <button class="btn btn-primary" >Next Question</button>
+              <button class="btn btn-dark" (click)="previous()">Previous Question</button>
+              <button class="btn btn-primary" (click)="next()">Next Question</button>
               
               <br><br><br>
               <button class="view-results">View Results</button>
