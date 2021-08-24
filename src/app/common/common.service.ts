@@ -14,8 +14,8 @@ export class CommonService {
    * functionality:
    */
   public getAppBaseUrl(){
-   // const baseUrl = 'http://localhost:3003/';
-    const baseUrl = 'http://18.217.236.69:3003/';
+    const baseUrl = 'http://localhost:3003/';
+    //const baseUrl = 'http://18.217.236.69:3003/';
     return baseUrl;
   }
 
@@ -30,7 +30,7 @@ export class CommonService {
       headers: new HttpHeaders({
         'Access-Control-Allow-Origin':'*',
         'Content-Type':  'application/json',
-        'Authorization': `Bearer ${'2312412412421dasdassdbdfn'}`
+       // 'Authorization': `Bearer ${'2312412412421dasdassdbdfn'}`
       })
     };
     return httpOptions;

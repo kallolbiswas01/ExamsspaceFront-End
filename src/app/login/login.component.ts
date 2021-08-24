@@ -48,6 +48,7 @@ public register(){
       let res = <any>data;
       if(res.type === "success"){
         this.user = res.data;
+        localStorage.setItem('token',this.user.token);
         this.router.navigateByUrl('dashboard');
       }
     });
