@@ -55,11 +55,17 @@ public register(){
   }
 
   loginWithGoogle(): void {
-    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(x => console.log(x));
+    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(x => {
+      console.log(x);
+      this.router.navigateByUrl('assessment');
+    });
   }
 
   signInWithFB(): void {
-    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID).then(x => console.log(x));
+    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID).then(x => {
+      console.log(x);
+      this.router.navigateByUrl('assessment');
+    });
   }
 
   logOut(): void {

@@ -53,7 +53,7 @@ import { RegisterComponent } from './register/register.component';
           },
           {
             id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('561602290896109'),
+            provider: new FacebookLoginProvider('375171090687204'),
           },
         ],
       } as SocialAuthServiceConfig,
