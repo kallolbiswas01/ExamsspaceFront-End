@@ -22,6 +22,11 @@ import { NotesresourcesComponent } from './student/notesresources/notesresources
 import { MentorsComponent } from './student/mentors/mentors.component';
 import { SubjectivecourseComponent } from './student/subjectivecourse/subjectivecourse.component';
 import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
+import { InputComponent } from './assessment/input/input.component';
+import { RadioComponent } from './assessment/radio/radio.component';
+import { CheckboxComponent } from './assessment/checkbox/checkbox.component';
+import { TextareaComponent } from './assessment/textarea/textarea.component';
+import { PlaceholderDirective } from './assessment/placeholder.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,11 @@ import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
     MentorsComponent,
     SubjectivecourseComponent,
     BundleexamComponent,
+    InputComponent,
+    RadioComponent,
+    CheckboxComponent,
+    TextareaComponent,
+    PlaceholderDirective,
   ],
   imports: [
     BrowserModule,

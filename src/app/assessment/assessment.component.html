@@ -1,47 +1,18 @@
 <div class="container">
-    <div class="row m-0">
-        <div class="col-12">
-           <h1>ASSESSMENT</h1>
-                 
-                  <ul class="choices">
-                    <!-- <li><input type="radio" name="question0" value="A"><span>2</span></li>
-                    <li><input type="radio" name="question0" value="B"><span>1</span></li>
-                    <li><input type="radio" name="question0" value="C"><span>3</span></li>
-                    <li><input type="radio" name="question0" value="D"><span>4</span></li> -->
+  <div class="row m-0">
+    <div class="col-12">
+      <h1>ASSESSMENT</h1>
 
+      <ul class="choices">
+        <ng-template appPlaceholder></ng-template>
+      </ul>
 
+      <button class="btn btn-dark" (click)="previous()">Previous Question</button>
+      <button class="btn btn-primary" (click)="next()">Next Question</button>
 
-
-                    <!-- <li *ngFor="let item of quiz"> -->
-                      <h4> {{quiz?.question}}</h4>
-                      <p *ngFor="let opc of quiz?.options">
-                      <input type="radio" name="question" value="B"><span>{{opc}}</span>
-                      </p>
-                    <!-- </li> -->
-                  </ul>
-              
-                  <!-- <h4>How many letters are there in "BMX"?</h4>
-                  <ul class="choices">
-                    <li><input type="radio" name="question1" value="A"><span>2</span></li>
-                    <li><input type="radio" name="question1" value="B"><span>1</span></li>
-                    <li><input type="radio" name="question1" value="C"><span>3</span></li>
-                    <li><input type="radio" name="question1" value="D"><span>4</span></li>
-                  </ul>
-               
-                  <h4>How many letters are there in "A"?</h4>
-                  <ul class="choices">
-                    <li><input type="radio" name="question2" value="A"><span>2</span></li>
-                    <li><input type="radio" name="question2" value="B"><span>1</span></li>
-                    <li><input type="radio" name="question2" value="C"><span>3</span></li>
-                    <li><input type="radio" name="question2" value="D"><span>4</span></li>
-                  </ul> -->
-               
-              <button class="btn btn-dark" (click)="previous()">Previous Question</button>
-              <button class="btn btn-primary" (click)="next()">Next Question</button>
-              
-              <br><br><br>
-              <button class="view-results">View Results</button>
-              <span id="myresults" class="my-results">My results will appear here</span>
+      <br><br><br>
+      <button class="view-results">View Results</button>
+      <span id="myresults" class="my-results">My results will appear here</span>
     </div>
-    </div>
+  </div>
 </div>
