@@ -30,7 +30,7 @@ h1.heading {
         font-weight: bold;
         font-size: 20px;
         color: #404040;
-        margin:0 0 0 0 ;
+        margin:10px 0 5px 0 ;
     }
     p {
         font-weight: bold;
@@ -41,5 +41,35 @@ h1.heading {
             font-weight: normal;
         }
 
+    }
+    .buynow {
+        border: 1px solid #cccccc;
+        padding:5px 10px;
+        color: #404040;
+        text-decoration: none;
+        width:90px;
+        height:30px;
+        line-height: 18px;
+        font-size: 12px;
+        border-radius:6px; 
+        &:hover {
+            background: #007D55;
+            color: #ffffff;
+        }
+    }
+    .price {
+        .pricelbl{
+            font-size: 28px;
+            color: #B01F24;
+        }
+        .strike{
+            font-size: 15px;
+            color: #404040;
+            text-decoration: line-through;
+        }
+        .off{
+            font-size: 15px;
+            color: #404040;
+        }
     }
 }
