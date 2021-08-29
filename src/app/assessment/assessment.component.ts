@@ -63,7 +63,6 @@ export class AssessmentComponent implements OnInit {
 
     const componentFactory = this.cfr.resolveComponentFactory(this._component);
     const viewContainerRef = this.placeholderDirective.viewContainerRef;
-    //const componentRef = viewContainerRef.createComponent(componentFactory);
     viewContainerRef.clear();
     const componentRef = viewContainerRef.createComponent<any>(componentFactory);
     componentRef.instance.data = this.quiz;
