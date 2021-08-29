@@ -1,17 +1,45 @@
+.login-bg {
+ 
+ 
+  // background: red;
+
+.login-gradient {
+  background:linear-gradient( #00152b, #023466);
+  position: absolute;
+  height:386px ;
+  width: 100%;
+}
+
 .login-area {
   // background:linear-gradient(to right #023466, #00152b);
   // background:  #023466;
-  height:100% ;
+  padding-top:100px ;
   .login-content {
     background: #ffffff;
     border-radius: 50px;
     width: 525px; 
-    height:550px ;
     padding:40px ; 
-    box-shadow: 0 0 10px #ccc;
     .form-control {
       border: 1px solid #ccc;
       margin-top:20px ;
     }
+    .login-form {
+      a {
+        font-weight: bold;
+        color: #006091;
+        font-size: 12px;
+        text-decoration: none;
+      }
+      p{
+        color: #000000;
+        font-size: 12px;
+        text-decoration: none;
+      }
+      span.label {
+        color: #ffffff;
+
+      }
+    }
   }
+}
 }

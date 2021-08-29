@@ -160,18 +160,18 @@ img {
 
 /*default-btn*/
 .default-btn {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    /* -webkit-transition: 0.5s; */
+    /* transition: 0.5s; */
     display: inline-block;
     padding: 13px 25px 12px 55px;
     position: relative;
-    background-color: #ff1949;
+    background-color: #007D55;
     color: #ffffff;
     border-width: 2px;
     border-style: solid;
-    border-color: #ff1949;
-    border-radius: 1px;
-    font-size: 14.5px;
+    border-color: #007D55;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -11285,9 +11285,6 @@ Login CSS
     display: none;
 }
 
-.login-content {
-    height: 100vh;
-}
 
 .login-content .login-form {
     text-align: center;
