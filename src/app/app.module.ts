@@ -20,6 +20,8 @@ import { RegisterComponent } from './register/register.component';
 import { LivetestComponent } from './student/livetest/livetest.component';
 import { NotesresourcesComponent } from './student/notesresources/notesresources.component';
 import { MentorsComponent } from './student/mentors/mentors.component';
+import { SubjectivecourseComponent } from './student/subjectivecourse/subjectivecourse.component';
+import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { MentorsComponent } from './student/mentors/mentors.component';
     LivetestComponent,
     NotesresourcesComponent,
     MentorsComponent,
+    SubjectivecourseComponent,
+    BundleexamComponent,
   ],
   imports: [
     BrowserModule,
