@@ -27,6 +27,7 @@ import { RadioComponent } from './assessment/radio/radio.component';
 import { CheckboxComponent } from './assessment/checkbox/checkbox.component';
 import { TextareaComponent } from './assessment/textarea/textarea.component';
 import { PlaceholderDirective } from './assessment/placeholder.directive';
+import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { PlaceholderDirective } from './assessment/placeholder.directive';
     CheckboxComponent,
     TextareaComponent,
     PlaceholderDirective,
+    RandomquizComponent,
   ],
   imports: [
     BrowserModule,
