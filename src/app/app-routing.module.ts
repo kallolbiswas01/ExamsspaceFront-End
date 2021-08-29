@@ -16,7 +16,6 @@ const routes: Routes = [
 //   { path: 'student/livetest', component: LivetestComponent },
 //   { path: 'student/notesresources', component: NotesresourcesComponent },
 // ]
- // { path: 'assessment', component: AssessmentComponent },
   {
     path: 'assessment',
     loadChildren: () =>     import('./assessment/assessment.module').then(m => m.AssessmentModule)
