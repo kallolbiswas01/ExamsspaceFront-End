@@ -1,0 +1,153 @@
+.student-dash{
+    width:100% ;
+    height:100vh ;
+  background:linear-gradient(to right, #ffffff 10%, #f8f8f8 90%);
+  h1.heading {
+      font-size: 16px;
+      color: #023466;
+      font-weight: bold;
+  }
+  .whitebox {
+    background: #ffffff;
+    box-shadow: 0 0 4px rgba(204, 204, 204, 30%);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .table thead th, .table tbody td {
+      border: 0px;
+      font-size: 14px;
+      color: #404040;
+  padding: 0;
+
+  }
+  .table thead th {
+    font-weight: bold;
+    margin-top:10px ;
+    }
+  .green-btn {
+      background: #007D55;
+      color: #ffffff;
+      padding:4px 15px; 
+      border-radius:4px; 
+      font-size: 14px;
+
+      &:hover {
+      text-decoration: none;
+
+      }
+  }
+  a {
+      text-decoration: none;
+  }
+  
+  .leftmenu {
+      background: #ffffff;
+      border-radius:0 50px 50px 0;
+      height:100vh;
+      box-shadow:15px 0 10px rgba(175, 167, 167, 10%);  
+      padding:50px 30px;
+      .menu-expand{
+        background: #F2F2F2;
+        height:43px ;
+        font-weight: bold;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        padding:0 10px ;
+        border-bottom: 1px solid #ffffff;
+        p {
+        margin: 0;
+        color: #404040;
+        }
+    }
+    .genereateresume {
+        background: #023466;
+        border-radius:4px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-bottom:20px ;
+       a {
+        text-decoration: none; 
+       }
+        span {
+            color: #ffffff;
+        }
+    }
+    #accordion {
+        padding: 0;
+    }
+    .drop-menu {
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                border-top: 1px solid #cccccc;               
+                a{
+                    color: #404040;
+                    font-size: 14px;
+                    text-decoration: none;
+                    padding:10px;
+                    display: block;
+                    &.active {
+                        background: #007D55;
+                        color: #ffffff;
+                        display: block;
+                        padding:10px;
+                    }
+                    &:hover {
+                        background: #007D55;
+                        color: #ffffff;
+                        display: block;
+                        padding:10px;
+                    }
+                }
+            }
+        }
+    }
+  }
+  .rightsection{
+      .user-details {
+          img {
+              margin-right: 10px;
+          }
+          h1 {
+              color: #023466;
+              font-size: 32px;
+          }
+          p {
+            color: #000000;
+            font-size: 14px;
+        }
+      }
+      .graph {
+         
+          p {
+              color: #404040;
+              font-size: 14px;
+          }
+      }
+      .skills-scroll {
+          overflow: auto;
+          height: 210px;
+          ul{
+              margin: 0;
+              padding: 0;
+              li{
+                list-style: none;
+                padding:5px 0 ;
+                a {
+                    color:#404040;
+                    text-decoration: none;
+                    font-size: 14px; 
+                }
+              }
+          }
+      }
+  }
+
+}

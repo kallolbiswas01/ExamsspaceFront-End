@@ -10,13 +10,183 @@
 </div>
 </div>
 </div> -->
-<div class="container">
-    <h2>Dashboard</h2>
-    <div class="card" style="width:400px" (click)="dashboard()">
-      <img class="card-img-top" src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a href="javascript:void(0)" class="btn btn-primary">Go to Assessment</a>
+<div class="student-dash">
+   <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-lg-3 col-12">
+          <div class="leftmenu">
+            
+            <div class="row">
+              <div class="genereateresume">
+                  <i class="far fa-address-card"></i>
+                  <a href="#">
+                      <span>Generate Your Resume</span>
+                   </a>
+              </div>
+                <div id="accordion">
+                      
+                        <a class="menu-expand" data-toggle="collapse" href="#dashboard">
+                           <p> Main Menu</p>
+                           <span>></span>
+                        </a>
+                     
+                      <div id="dashboard" class="collapse show" data-parent="#accordion">
+                       <div class="drop-menu">
+                        <ul>
+                          <li><a href="#" class="active">Dashboard</a></li>
+                          <li><a href="#">My Exams</a></li>
+                          <li><a href="#">Live Tests</a></li>
+                          <li><a href="#">Notes & Resources</a></li>
+                        </ul>
+
+                       </div>
+                      </div>
+                   
+                      
+                      <a class="menu-expand" data-toggle="collapse" href="#practice">
+                          <p>Practice</p>
+                          <span>></span>
+                       </a>
+                      <div id="practice" class="collapse" data-parent="#accordion">
+                          <div class="drop-menu">
+                              <ul>
+                                <li><a href="#">Mentor Profile</a></li>
+                                <li><a href="#">Event Exam</a></li>
+                                <li><a href="#">Subjective/Course Exam</a></li>
+                                <li><a href="#">Bundle Exam</a></li>
+                                <li><a href="#">Olympiad</a></li>
+                                <li><a href="#">365 Days - Quiz Planning</a></li>
+                              </ul>
+      
+                             </div>
+                      </div>
+                  </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-md-9 col-lg-9 col-12">
+          <div class="rightsection">
+          <div class="row">
+            <div class="bread">
+                <a href="#">Home</a> > <span>Dashboard</span>
+            </div>
+          </div>
+          <div class="row p-0 user-details">
+            <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center">
+              <div>
+                  <img  src="assets/img/skills.png"  alt="image">
+              </div>
+              <div>
+                <h1>4/10</h1>
+                <p>Skills earned</p>
+              </div>
+             
+          </div>
+          <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center">
+              <div>
+                  <img  src="assets/img/badge.png"  alt="image">
+              </div>
+              <div>
+                <h1>23</h1>
+                <p>Badge earned</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center">
+                <div>
+                    <img  src="assets/img/skills.png"  alt="image">
+                </div>
+                <div>
+                  <h1>458</h1>
+                  <p>Total Quiz Attempt</p>
+                </div>
+              </div>
+        </div>
+        <div class="row py-3">
+          <div class="col-lg-9 col-md-9">
+            <div class="graph whitebox">
+              <h1 class="heading">My Progress</h1>
+              <div class="text-center">
+                <p>Subject Wise Number of Question in Examsspace</p>
+                <img src="assets/img/graph.png"  alt="image">
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="whitebox">
+              <h1 class="heading">Skills Available For Practice</h1>
+              <div class="skills-scroll">
+                <ul>
+                  <li><a href="#"><span></span>Algorithms</a></li>
+                  <li><a href="#"><span></span>Python</a></li>
+                  <li><a href="#"><span></span>Functional Programming</a></li>
+                  <li><a href="#"><span></span>Databases</a></li>
+                  <li><a href="#"><span></span>Data Structures</a></li>
+                  <li><a href="#"><span></span>Ruby</a></li>
+                  <li><a href="#"><span></span>Artificial Intelligence</a></li>
+                  <li><a href="#"><span></span>Algorithms</a></li>
+                  <li><a href="#"><span></span>Python</a></li>
+                  <li><a href="#"><span></span>Functional Programming</a></li>
+                  <li><a href="#"><span></span>Databases</a></li>
+                  <li><a href="#"><span></span>Data Structures</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="whitebox">
+              <h1 class="heading">Recently Attempted Tests</h1>
+              <table class="table no-border">
+                  <thead>
+                    <tr>
+                      <th>Test Name</th>
+                      <th>Mark’s Obtained (%) </th>
+                      <th>Attempt On  </th>
+                    </tr>
+                  </thead>
+                  <tbody>                   
+                    <tr>
+                      <td>Series Completion</td>
+                      <td>12.5</td>
+                      <td>26 Aug 2021</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="#" class="green-btn">View More</a>
+            </div>
+          </div>
+          <div class="col-6">
+              <div class="whitebox">
+                <h1 class="heading">Highest Score Achieved by You
+                  </h1>
+                <table class="table no-border">
+                    <thead>
+                      <tr>
+                        <th>Test Name</th>
+                        <th>Mark’s Obtained (%) </th>
+                        <th>Attempt On  </th>
+                      </tr>
+                    </thead>
+                    <tbody>                   
+                      <tr>
+                        <td>Series Completion</td>
+                        <td>85.5</td>
+                        <td>20 Jan  2021</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <a href="#" class="green-btn">View More</a>
+              </div>
+            </div>
+        </div>
       </div>
+      </div>
+    </div>
+   </div>
     </div>

@@ -2,4 +2,40 @@ body, html {
     height:100% ;
     width: 100%;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ccc; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #B01F24; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
+.bread {
+    font-size:14px;
+    color:#404040;
+    background: none;
+    padding: 30px;
+}
+.bread  a {
+    font-size:14px;
+    color:#007D55;
+    text-decoration: none;
+    padding-right:5px ;
+    font-weight: bold;
+}
+.bread  span { 
+    padding-left:5px ;
+
+}
