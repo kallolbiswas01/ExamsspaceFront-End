@@ -15,5 +15,9 @@ export class DashboardComponent implements OnInit {
   dashboard(){
     this.router.navigateByUrl('assessment');
   }
+  // notesresources(){
+  //       this.router.navigateByUrl('/student/notesresources');
+
+  // }
 
 }

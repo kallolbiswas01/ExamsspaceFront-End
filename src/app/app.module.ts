@@ -18,6 +18,8 @@ import {  SocialLoginModule,  SocialAuthServiceConfig,} from 'angularx-social-lo
 import {  GoogleLoginProvider,  FacebookLoginProvider,} from 'angularx-social-login';
 import { RegisterComponent } from './register/register.component';
 import { LivetestComponent } from './student/livetest/livetest.component';
+import { NotesresourcesComponent } from './student/notesresources/notesresources.component';
+import { MentorsComponent } from './student/mentors/mentors.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { LivetestComponent } from './student/livetest/livetest.component';
     HomeComponent,
     RegisterComponent,
     LivetestComponent,
+    NotesresourcesComponent,
+    MentorsComponent,
   ],
   imports: [
     BrowserModule,
