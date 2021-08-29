@@ -1,0 +1,52 @@
+.congheading {
+    h1 {
+        font-size: 20px;
+        color: #000;
+        span {
+            font-size: 46px;
+            color: #007D55;
+        }
+    }
+   
+}
+.whitebox{
+    background: #ffffff;
+    box-shadow: 0 0 4px rgba(204, 204, 204, 30%);
+    border-radius: 0px;
+    padding:20px ;
+    h2 {
+        font-weight: bold;
+        font-size: 22px;
+        color: #404040;
+        margin:10px 0 10px 0 ;
+    }
+    p {
+        font-weight: bold;
+        font-size: 14px;
+        color: #404040;
+        margin:0 0 0 0 ;
+       
+        }
+        .skill {
+            width:74px ;
+            height: 74px;
+            border:1px solid #ccc;
+            border-radius: 100px;
+        }
+        .btn {
+            border: 1px solid #cccccc;
+            padding:5px 10px;
+            color: #404040;
+            text-decoration: none;
+            width:120px;
+            height:30px;
+            line-height: 18px;
+            font-size: 12px;
+            border-radius:6px; 
+            &:hover, &.active {
+                background: #007D55;
+                color: #ffffff;
+                
+            }
+        }
+}
