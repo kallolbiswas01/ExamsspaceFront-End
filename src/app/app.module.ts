@@ -9,7 +9,6 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AssessmentComponent } from './assessment/assessment.component';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TabsModule } from 'ngx-bootstrap/tabs';
@@ -22,11 +21,6 @@ import { NotesresourcesComponent } from './student/notesresources/notesresources
 import { MentorsComponent } from './student/mentors/mentors.component';
 import { SubjectivecourseComponent } from './student/subjectivecourse/subjectivecourse.component';
 import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
-import { InputComponent } from './assessment/input/input.component';
-import { RadioComponent } from './assessment/radio/radio.component';
-import { CheckboxComponent } from './assessment/checkbox/checkbox.component';
-import { TextareaComponent } from './assessment/textarea/textarea.component';
-import { PlaceholderDirective } from './assessment/placeholder.directive';
 import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
 
 @NgModule({
@@ -34,7 +28,6 @@ import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    AssessmentComponent,
     HomeComponent,
     RegisterComponent,
     LivetestComponent,
@@ -42,11 +35,6 @@ import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
     MentorsComponent,
     SubjectivecourseComponent,
     BundleexamComponent,
-    InputComponent,
-    RadioComponent,
-    CheckboxComponent,
-    TextareaComponent,
-    PlaceholderDirective,
     RandomquizComponent,
   ],
   imports: [
