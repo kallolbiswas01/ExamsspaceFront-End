@@ -17,6 +17,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import {  SocialLoginModule,  SocialAuthServiceConfig,} from 'angularx-social-login';
 import {  GoogleLoginProvider,  FacebookLoginProvider,} from 'angularx-social-login';
 import { RegisterComponent } from './register/register.component';
+import { LivetestComponent } from './student/livetest/livetest.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RegisterComponent } from './register/register.component';
     AssessmentComponent,
     HomeComponent,
     RegisterComponent,
+    LivetestComponent,
   ],
   imports: [
     BrowserModule,
