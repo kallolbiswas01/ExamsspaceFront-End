@@ -3,10 +3,26 @@
 .signup {
   background: #023466;
   height:100%;
+  padding-top: 100px;
+  p, label{
+    font-size: 14px;
+    color: #687288;
+    a {
+      color: #006091;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+  
+    p.small {
+      font-size: 12px;
+      color: #000000;
+    }
+  
   .signbox {
     background: #ffffff;
     border-radius: 30px;
-    padding:30px;
+    padding:55px;
     width:681px;
     box-sizing: border-box;
   }
@@ -14,33 +30,37 @@
 
 input[type=text], input[type=password] {
     width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    padding:8px 15px;
+    margin: 2px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background: #ffffff;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #687288;
   }
   
   input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
     outline: none;
+    border: 1px solid #023466;
+    color: #023466;
   }
   
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
+  
   
   /* Set a style for all buttons */
   button {
-    background-color: #04AA6D;
-    color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+
   }
   
   button:hover {
@@ -48,32 +68,20 @@ input[type=text], input[type=password] {
   }
   
   /* Extra styles for the cancel button */
-  .cancelbtn {
+  .cancel {
     padding: 14px 20px;
-    background-color: #f44336;
+    background-color: #F2F2F2;
+    box-shadow: 4px 0 4px #EAEFFA;
+    color: #404040;
+
+
   }
   
-  /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
+  .register {
+    padding: 14px 20px;
+    background-color: #007D55;
+    box-shadow: 4px 0 4px #EAEFFA;
+    color: #ffffff;
   }
   
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-  }
   
-  /* Clear floats */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
-       width: 100%;
-    }
-  }
