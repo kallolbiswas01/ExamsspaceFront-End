@@ -19,7 +19,7 @@
         <div class="col-lg-6 col-md-6 col-12">
           <h1 class="heading">Python Knowledge Test</h1>
         </div>
-        <div class="col-lg-6 col-md-6 col-12 text-right">
+        <!-- <div class="col-lg-6 col-md-6 col-12 text-right">
           <div class="questionby">
             <span>View Question
               <select>
@@ -27,9 +27,8 @@
                 <option>2 Question</option>
               </select>
             </span>
-          <button class="btn btn-success" (click)="submit()">Submit</button>
         </div>
-        </div>
+        </div> -->
       </div>
       <div class="row timesection mt-3">
         <div class="col-lg-3 col-md-3 col-12 time">
@@ -67,8 +66,9 @@
       </div>
       <div class="row p-4 result">
          <div class="col-12 text-right">
-            <button class="btn btn-success">View Results</button>
-          <span id="myresults">My results will appear here</span>
+            <button class="btn btn-dark">View Results</button>
+          <button class="btn btn-success ml-2" (click)="submit()">Submit</button>
+          <!-- <span id="myresults">My results will appear here</span> -->
          </div>
       </div>
     </div>
