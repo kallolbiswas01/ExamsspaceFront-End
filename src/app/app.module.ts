@@ -22,6 +22,7 @@ import { MentorsComponent } from './student/mentors/mentors.component';
 import { SubjectivecourseComponent } from './student/subjectivecourse/subjectivecourse.component';
 import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
 import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
     SubjectivecourseComponent,
     BundleexamComponent,
     RandomquizComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
