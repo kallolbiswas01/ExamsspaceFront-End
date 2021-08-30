@@ -23,6 +23,8 @@ import { SubjectivecourseComponent } from './student/subjectivecourse/subjective
 import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
 import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
 import { HeaderComponent } from './header/header.component';
+import { MyexamsComponent } from './student/myexams/myexams.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { HeaderComponent } from './header/header.component';
     BundleexamComponent,
     RandomquizComponent,
     HeaderComponent,
+    MyexamsComponent
   ],
   imports: [
     BrowserModule,
