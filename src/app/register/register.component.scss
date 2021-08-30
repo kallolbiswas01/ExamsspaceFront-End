@@ -1,4 +1,17 @@
 /* Full-width input fields */
+
+.signup {
+  background: #023466;
+  height:100%;
+  .signbox {
+    background: #ffffff;
+    border-radius: 30px;
+    padding:30px;
+    width:681px;
+    box-sizing: border-box;
+  }
+}
+
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
