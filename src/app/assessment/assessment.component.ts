@@ -68,6 +68,9 @@ export class AssessmentComponent implements OnInit {
     componentRef.instance.data = this.quiz;
     //this.componentsList.push(componentRef);
   }
+  submit(){
+    alert("Do you want to submit?");
+  }
 
   previous() {
     const currentIndex = this.quizs.indexOf(this.quiz);

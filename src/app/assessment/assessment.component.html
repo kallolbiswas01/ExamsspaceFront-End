@@ -2,29 +2,76 @@
   <div class="row">
     <!-- <app-header></app-header> -->
   </div>
-<div class="container assessment">
-  <div class="row">
-    <div class="col-lg-6 col-md-6 col-12">
-     <h1 class="heading">Python Knowledge Test</h1>
+  <div class="container-fluid border-bread">
+    <div class="container">
+      <div class="row">
+        <div class="bread">
+          <a href="#">Home</a> > <span>Dashboard</span>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-12">
-      1
+
+  </div>
+  <div class="container-fluid">
+    <div class="container">
+
+      <div class="row mt-4 d-flex justify-content-between">
+        <div class="col-lg-6 col-md-6 col-12">
+          <h1 class="heading">Python Knowledge Test</h1>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12 text-right">
+          <div class="questionby">
+            <span>View Question
+              <select>
+                <option>1 Question</option>
+                <option>2 Question</option>
+              </select>
+            </span>
+          <button class="btn btn-success" (click)="submit()">Submit</button>
+        </div>
+        </div>
+      </div>
+      <div class="row timesection mt-3">
+        <div class="col-lg-3 col-md-3 col-12 time">
+          <div class="ques-time">
+            <div class="quiz-repeat">
+              <h1>Question <span>17</span> of <span>40</span></h1>
+            </div>
+            <div class="quiz-repeat">
+              <h1>Time Remaining</h1>
+              <p class="remaining">08:50</p>
+            </div>
+            <div class="quiz-repeat">
+              <h1>Total Time</h1>
+              <p class="totaltime">22:10</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-12 quiz-main p-0">
+          <div class="p-3 d-flex justify-content-between flex-column align-items-stretch h-100">
+
+           
+          <div class="quiz-area">
+             <ul class="choices">
+              <ng-template appPlaceholder></ng-template>
+            </ul>
+          </div>
+            <div class="quiz-btn px-3 d-flex justify-content-between">
+                <button class="btn btn-dark" (click)="previous()">Previous Question</button>
+                <button class="btn btn-primary" (click)="next()">Next Question</button>
+    
+              </div>
+          </div>
+         
+        </div>
+      </div>
+      <div class="row p-4 result">
+         <div class="col-12 text-right">
+            <button class="btn btn-success">View Results</button>
+          <span id="myresults">My results will appear here</span>
+         </div>
+      </div>
     </div>
   </div>
-  <div class="row m-0">
-    <div class="col-12">
-
-      <ul class="choices">
-        <ng-template appPlaceholder></ng-template>
-      </ul>
-
-      <button class="btn btn-dark" (click)="previous()">Previous Question</button>
-      <button class="btn btn-primary" (click)="next()">Next Question</button>
-
-      <br><br><br>
-      <button class="view-results">View Results</button>
-      <span id="myresults" class="my-results">My results will appear here</span>
-    </div>
-  </div>
-</div>
+ 
 </div>
