@@ -8,6 +8,7 @@ import { RadioComponent } from './radio/radio.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { PlaceholderDirective } from './placeholder.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PlaceholderDirective } from './placeholder.directive';
   ],
   imports: [
     CommonModule,
-    AssessmentRoutingModule
+    FormsModule,
+    AssessmentRoutingModule,
   ]
 })
 export class AssessmentModule { }

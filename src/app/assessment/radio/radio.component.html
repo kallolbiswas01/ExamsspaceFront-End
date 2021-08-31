@@ -1,6 +1,8 @@
-<p> {{data?.description}}</p>
-<ng-container *ngIf="data.option">
-<p *ngFor="let opc of data?.value">
-<input type="radio" name="question" value="B"><span>{{opc}}</span>
-</p>
+<p> {{quiz?.description}}</p>
+<ng-container *ngIf="quiz?.option ==='radio'">
+    <p *ngFor="let opc of quiz?.value">
+        <input type="radio" [value]="opc" [name]="opc" id="opc" [(ngModel)]="question" (change)="onItemChange(quiz)">
+        <span>{{opc}}</span>
+    </p>
 </ng-container>
+

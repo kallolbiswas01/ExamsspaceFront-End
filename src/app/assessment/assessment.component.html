@@ -34,7 +34,7 @@
         <div class="col-lg-3 col-md-3 col-12 time">
           <div class="ques-time">
             <div class="quiz-repeat">
-              <h1>Question <span>17</span> of <span>40</span></h1>
+              <h1>Question <span>{{currentQuestionNumber}}</span> of <span>{{totalQuesCount}}</span></h1>
             </div>
             <div class="quiz-repeat">
               <h1>Time Remaining</h1>
@@ -49,29 +49,46 @@
         <div class="col-lg-9 col-md-9 col-12 quiz-main p-0">
           <div class="p-3 d-flex justify-content-between flex-column align-items-stretch h-100">
 
-           
-          <div class="quiz-area">
-             <ul class="choices">
-              <ng-template appPlaceholder></ng-template>
-            </ul>
-          </div>
+
+            <div class="quiz-area">
+              <ul class="choices">
+                <!-- <ng-template appPlaceholder></ng-template> -->
+                <p> {{quiz?.description}}</p>
+                <ng-container *ngIf="quiz?.option ==='radio'">
+                  <p *ngFor="let opc of quiz?.value">
+                    <input type="radio" [value]="opc.name" [name]="opc.name" id="opc" [(ngModel)]="quiz.answer"
+                      (change)="onRadioChange(quiz)">
+                      <span>{{opc?.name}}</span>
+                  </p>
+                </ng-container>
+                <ng-container *ngIf="quiz?.option ==='checkbox'">
+                  <p *ngFor="let opc of quiz?.value; let i = index">
+                    <input type="checkbox" [(ngModel)]="opc.checked" name="opc{{i}}" (change)="onCheckBoxChange()"/>
+                    <span>{{opc?.name}}</span>
+                  </p>
+                </ng-container>
+
+              </ul>
+            </div>
             <div class="quiz-btn px-3 d-flex justify-content-between">
-                <button class="btn btn-dark" (click)="previous()">Previous Question</button>
-                <button class="btn btn-primary" (click)="next()">Next Question</button>
-    
-              </div>
+              <button class="btn btn-dark" (click)="previous()" [disabled]="currentQuestionNumber ===1">Previous
+                Question</button>
+              <button class="btn btn-primary" (click)="next()"
+                [disabled]="currentQuestionNumber === totalQuesCount">Next Question</button>
+
+            </div>
           </div>
-         
+
         </div>
       </div>
       <div class="row p-4 result">
-         <div class="col-12 text-right">
-            <button class="btn btn-dark">View Results</button>
-          <button class="btn btn-success ml-2" (click)="submit()">Submit</button>
+        <div class="col-12 text-right">
+          <button class="btn btn-dark">View Results</button>
+          <button class="btn btn-success ml-2" (click)="submitAssessment()">Submit</button>
           <!-- <span id="myresults">My results will appear here</span> -->
-         </div>
+        </div>
       </div>
     </div>
   </div>
- 
+
 </div>

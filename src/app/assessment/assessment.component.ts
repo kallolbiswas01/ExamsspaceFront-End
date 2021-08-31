@@ -11,6 +11,7 @@ import { RadioComponent } from './radio/radio.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { PlaceholderDirective } from './placeholder.directive';
+import { Question } from './question';
 @Component({
   selector: 'app-assessment',
   templateUrl: './assessment.component.html',
@@ -21,14 +22,27 @@ export class AssessmentComponent implements OnInit {
   quiz: any;
   @ViewChild(PlaceholderDirective) placeholderDirective: PlaceholderDirective;
   private _component: any;
+  public totalQuesCount:number = 0;
+  public currentQuestionNumber: number = 0;
+  checkedQuizList: any;
+
 
   constructor(
     private assessmentService: AssessmentService,    
     private cfr: ComponentFactoryResolver
   ) {}
+
+
   ngOnInit(): void {
     this.getAssessment();
   }
+  /******************************************
+   * functionName: getAssessment  
+   * input: {}
+   * output: JSON
+   * owner: Sushil Yadav
+   * date:30/08/2021
+   ********************************************/
   public getAssessment() {
     this.assessmentService.getAssessment().subscribe((data) => {
       console.log('Assessment', data);
@@ -36,8 +50,10 @@ export class AssessmentComponent implements OnInit {
       if (res.type === 'success') {
         this.quizs = res.data;
         this.quiz = this.quizs[0];
+        this.totalQuesCount = res.totalCount,
+        this.currentQuestionNumber = 1
         //this.router.navigateByUrl('dashboard');
-        this.loadTabComponent(this.quiz.option);
+       // this.loadTabComponent(this.quiz.option);
       }
     });
   }
@@ -65,26 +81,45 @@ export class AssessmentComponent implements OnInit {
     const viewContainerRef = this.placeholderDirective.viewContainerRef;
     viewContainerRef.clear();
     const componentRef = viewContainerRef.createComponent<any>(componentFactory);
-    componentRef.instance.data = this.quiz;
+    componentRef.instance.quiz = this.quiz;
+    //componentRef.instance.quizs = this.quizs;
     //this.componentsList.push(componentRef);
-  }
-  submit(){
-    alert("Do you want to submit?");
   }
 
   previous() {
     const currentIndex = this.quizs.indexOf(this.quiz);
-    const newIndex =
-      currentIndex === 0 ? this.quizs.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? this.quizs.length - 1 : currentIndex - 1;
     this.quiz = this.quizs[newIndex];
-    this.loadTabComponent(this.quiz.option);
+    this.currentQuestionNumber--;
+    //this.loadTabComponent(this.quiz.option);
   }
 
   next() {
     const currentIndex = this.quizs.indexOf(this.quiz);
-    const newIndex =
-      currentIndex === this.quizs.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === this.quizs.length - 1 ? 0 : currentIndex + 1;
     this.quiz = this.quizs[newIndex];
-    this.loadTabComponent(this.quiz.option);
+    this.currentQuestionNumber++;
+    //this.loadTabComponent(this.quiz.option);
+  }
+
+  /******************************************
+   * functionName:   submitAssessment(){ 
+   * input: []
+   * output: 
+   * owner: Sushil Yadav
+   * date:30/08/2021
+   ********************************************/
+  submitAssessment(){
+    alert("Do you want to submit?");
+  }
+  
+  onRadioChange(item:any){    
+    this.quizs[this.quizs.findIndex((data: { _id: string; }) => data._id === item._id)].answer = item.answer;
+  }
+  onCheckBoxChange(){
+    this.quizs.map((data: { isChecked: any; value: { name: string; }; }, index: string | number) => {
+      if(data.isChecked)
+        this.quizs[index].answer = this.quizs[index].answer +','+ data.value.name
+    });
   }
 }
