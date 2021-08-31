@@ -1,69 +1,17 @@
 <h1 class="heading">Mentor’s Profile</h1>
 <div class="row">
-    <div class="col-lg-6 col-md-6 col-12 mb-3">
+    <div class="col-lg-6 col-md-6 col-12 mb-3" *ngFor="let profile of mentorList">
         <div class="whitebox d-flex">
-            <div class="mr-3"> <img src="assets/img/mentor1.png"></div>
+            <div class="mr-3"> 
+                <img [src]="profile.mentorPic">
+            </div>
             <div>
-            <h2>Micheal John</h2>
-            <p><strong>Location</strong> : Ann Arbor, MI,  USA </p>
-             <p class="mb-2"><strong> Mentor Industory</strong> : Math/Physics</p>
-             <a href="#">VIEW PROFILE</a>
+            <h2>{{profile.mentorName}}</h2>
+            <p><strong>Location</strong> : {{profile.location}} </p>
+             <p class="mb-2"><strong> Mentor Industory</strong> : {{profile.industory}}</p>
+             <a href="#">{{profile.profileView}}</a>
              </div>
         </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-12 mb-3">
-            <div class="whitebox d-flex">
-                <div class="mr-3"> <img src="assets/img/mentor2.png"></div>
-                <div>
-                <h2>White Root</h2>
-                <p><strong>Location</strong> : Ann Arbor, MI,  USA </p>
-                 <p class="mb-2"><strong> Mentor Industory</strong> : Math/Physics</p>
-                 <a href="#">VIEW PROFILE</a>
-                 </div>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 mb-3">
-                <div class="whitebox d-flex">
-                    <div class="mr-3"> <img src="assets/img/mentor3.png"></div>
-                    <div>
-                    <h2>Micheal John</h2>
-                    <p><strong>Location</strong> : Ann Arbor, MI,  USA </p>
-                     <p class="mb-2"><strong> Mentor Industory</strong> : Math/Physics</p>
-                     <a href="#">VIEW PROFILE</a>
-                     </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12 mb-3">
-                    <div class="whitebox d-flex">
-                        <div class="mr-3"> <img src="assets/img/mentor4.png"></div>
-                        <div>
-                        <h2>White Root</h2>
-                        <p><strong>Location</strong> : Ann Arbor, MI,  USA </p>
-                         <p class="mb-2"><strong> Mentor Industory</strong> : Math/Physics</p>
-                         <a href="#">VIEW PROFILE</a>
-                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12 mb-3">
-                        <div class="whitebox d-flex">
-                            <div class="mr-3"> <img src="assets/img/mentor5.png"></div>
-                            <div>
-                            <h2>Micheal John</h2>
-                            <p><strong>Location</strong> : Ann Arbor, MI,  USA </p>
-                             <p class="mb-2"><strong> Mentor Industory</strong> : Math/Physics</p>
-                             <a href="#">VIEW PROFILE</a>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12 mb-3">
-                            <div class="whitebox d-flex">
-                                <div class="mr-3"> <img src="assets/img/mentor6.png"></div>
-                                <div>
-                                <h2>White Root</h2>
-                                <p><strong>Location</strong> : Ann Arbor, MI,  USA </p>
-                                 <p class="mb-2"><strong> Mentor Industory</strong> : Math/Physics</p>
-                                 <a href="#">VIEW PROFILE</a>
-                                 </div>
-                            </div>
-                        </div>
+    
 </div>
