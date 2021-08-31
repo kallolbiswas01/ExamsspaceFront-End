@@ -25,6 +25,7 @@ import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
 import { HeaderComponent } from './header/header.component';
 import { MyexamsComponent } from './student/myexams/myexams.component';
 import { StudentmenuComponent } from './student/studentmenu/studentmenu.component';
+import { OlympiadComponent } from './student/olympiad/olympiad.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { StudentmenuComponent } from './student/studentmenu/studentmenu.componen
     RandomquizComponent,
     HeaderComponent,
     MyexamsComponent,
-    StudentmenuComponent
+    StudentmenuComponent,
+    OlympiadComponent
     
   ],
   imports: [

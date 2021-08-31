@@ -1,0 +1,83 @@
+h1.heading {
+    font-size: 36px;
+    color: #023466;
+    font-weight: normal;
+}
+p {
+    font-weight: normal;
+    font-size: 14px;
+    color: #404040;
+    margin:0 0 0 0 ;
+    span{
+        font-weight: normal;
+    }
+
+}
+.whitebox {
+    background: #ffffff;
+    box-shadow: 0 0 4px rgba(204, 204, 204, 30%);
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    .subject{
+        position: relative;
+        .name{
+            background: #ffffff;
+            padding: 10px 20px;
+            font-size: 14px;
+            color:#404040;
+            font-weight: bold;
+            position: absolute;
+            top: 70px;
+
+        }
+    }
+    .registernow {
+        background: #007D55;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 20px;
+        display: block;
+    }
+    .subjective {
+        padding:10px ;
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                width:100% ;
+                float: left;
+                padding:5px 0  10px 0;
+                a {
+                    font-size: 14px;
+                    color: #404040;
+                    text-decoration: none;
+                    &:hover {
+                        color: #007D55;
+                    }
+                }
+            }
+        }
+    }
+    h2 {
+        color: #007D55;
+        font-weight: bold;
+        font-size: 16px;
+        margin:0 0 10px 0;
+    }
+    p{
+        color: #404040;
+        font-size: 12px;
+        margin: 0px 0 0 0;
+        strong{
+            font-weight: bold;
+        }
+
+    }
+  
+}

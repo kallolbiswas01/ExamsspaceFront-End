@@ -1,0 +1,46 @@
+<h1 class="heading">Olmpiad</h1>
+<p>Olympiad exams are competitive exams conducted by various organizations across India and abroad. 
+    These examinations are conducted on the basis of school curriculum of CBSE, ICSE, and other major state boards. 
+    These exams help to compare student's performance with their peers across the country. 
+    The question paper for these exams is objective-type with multiple-choice questions. 
+    Olympiad exams focus on concept-based learning and logical thinking. 
+    This in turn enhances the abilities of the student which is an important tool to face the 
+    future competition coming in their lives.
+
+</p>
+<div class="row mt-3">
+    <div class="col-lg-4 col-md-4 col-12 mb-3" *ngFor="let list of olypiaddata">
+            <div class="whitebox">
+                    <div class="mr-3 subject"> 
+                        <img [src]="list.imgPath">
+                        <div class="name">{{list.heading}}</div>
+                    </div>
+                    <div class="subjective">
+                        <ul>
+                            <li *ngFor="let opc of list.subjects"><a href="#">{{opc}}</a></li>
+                           
+                        </ul>
+                    </div>
+                    <div class="">
+                    <a href="#" class="registernow">REGISTER NOW</a>
+                </div>
+                </div>
+            <!-- <div class="whitebox">
+                    <div class="mr-3 subject"> 
+                        <img src="assets/img/subjective1.png">
+                        <div class="name">ANNUAL OLYMPIAD EXAMS</div>
+                    </div>
+                    <div class="subjective">
+                        <ul>
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Math</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">GK</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                    <a href="#" class="registernow">REGISTER NOW</a>
+                </div>
+                </div> -->
+        </div>
+        </div>
