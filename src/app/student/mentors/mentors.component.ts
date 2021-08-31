@@ -13,8 +13,8 @@ export class MentorsComponent implements OnInit {
   }
 
   public mentorList = [
-  {"mentorPic":"/assets/img/mentor1.png", "mentorName":"Micheal John", "location":"Ann Arbor, MI, USA","industory":"Math/Physics", "profileView":"a"},
-  {"mentorPic":"/assets/img/mentor2.png", "mentorName":"White Root", "location":"Ann Arbor, MI, USA","industory":"Math/Physics", "profileView":"b"}
+  {"mentorPic":"/assets/img/mentor1.png", "mentorName":"Micheal John", "location":"Ann Arbor, MI, USA","industory":"Math/Physics", "profileView":"View Profile"},
+  {"mentorPic":"/assets/img/mentor2.png", "mentorName":"White Root", "location":"Ann Arbor, MI, USA","industory":"Math/Physics", "profileView":"View Profile"}
 
 
   ]
