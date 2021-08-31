@@ -39,6 +39,23 @@
         color: #ffffff;
 
       }
+      /*default-btn*/
+.default-btn {
+  /* -webkit-transition: 0.5s; */
+  /* transition: 0.5s; */
+  display: inline-block;
+  padding: 13px 25px 12px 55px;
+  position: relative;
+  background-color: #007D55;
+  color: #ffffff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #007D55;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
     }
   }
 }
