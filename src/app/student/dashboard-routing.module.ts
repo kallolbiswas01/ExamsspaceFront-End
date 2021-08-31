@@ -5,7 +5,7 @@ import { NotesresourcesComponent } from './notesresources/notesresources.compone
 
 const routes: Routes = [
   { path: 'student/livetest', component: LivetestComponent},
-  { path: 'student/notesresources', component: NotesresourcesComponent}
+  { path: 'student/notesresources', component: NotesresourcesComponent},
 ];
 
 @NgModule({

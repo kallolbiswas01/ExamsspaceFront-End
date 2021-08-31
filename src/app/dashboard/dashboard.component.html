@@ -16,57 +16,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-lg-3 col-12">
-          <div class="leftmenu">
-            
-            <div class="row">
-              <div class="genereateresume">
-                  <i class="far fa-address-card"></i>
-                  <a href="#">
-                      <span>Generate Your Resume</span>
-                   </a>
-              </div>
-                <div id="accordion">
-                      
-                        <a class="menu-expand" data-toggle="collapse" href="#dashboard">
-                           <p> Main Menu</p>
-                           <span>></span>
-                        </a>
-                     
-                      <div id="dashboard" class="collapse show" data-parent="#accordion">
-                       <div class="drop-menu">
-                        <ul>
-                          <li><a [routerLink]="['/student/livetest']" class="active">Dashboard</a></li>
-                          <li><a [routerLink]="['/assessment']">My Exams</a></li>
-                          <li><a href="#">Live Tests</a></li>
-                          <li><a href="#">Notes & Resources</a></li>
-                        </ul>
-
-                       </div>
-                      </div>
-                   
-                      
-                      <a class="menu-expand" data-toggle="collapse" href="#practice">
-                          <p>Practice</p>
-                          <span>></span>
-                       </a>
-                      <div id="practice" class="collapse show" data-parent="#accordion">
-                          <div class="drop-menu">
-                              <ul>
-                                <li><a href="#">Mentor Profile</a></li>
-                                <li><a href="#">Event Exam</a></li>
-                                <li><a href="#">Subjective/Course Exam</a></li>
-                                <li><a href="#">Bundle Exam</a></li>
-                                <li><a href="#">Olympiad</a></li>
-                                <li><a href="#">365 Days - Quiz Planning</a></li>
-                              </ul>
-      
-                             </div>
-                      </div>
-                  </div>
-            </div>
-
-
-
+          <div>
+            <app-studentmenu></app-studentmenu>
           </div>
         </div>
         <div class="col-md-9 col-lg-9 col-12">

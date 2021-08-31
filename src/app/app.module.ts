@@ -24,6 +24,7 @@ import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
 import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
 import { HeaderComponent } from './header/header.component';
 import { MyexamsComponent } from './student/myexams/myexams.component';
+import { StudentmenuComponent } from './student/studentmenu/studentmenu.component';
 
 
 @NgModule({
@@ -40,7 +41,9 @@ import { MyexamsComponent } from './student/myexams/myexams.component';
     BundleexamComponent,
     RandomquizComponent,
     HeaderComponent,
-    MyexamsComponent
+    MyexamsComponent,
+    StudentmenuComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -76,4 +79,6 @@ import { MyexamsComponent } from './student/myexams/myexams.component';
   ],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
+
