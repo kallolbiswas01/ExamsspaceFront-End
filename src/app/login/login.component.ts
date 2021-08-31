@@ -49,7 +49,7 @@ public register(){
       if(res.type === "success"){
         this.user = res.data;
         localStorage.setItem('token',this.user.token);
-        this.router.navigateByUrl('dashboard');
+        this.router.navigateByUrl('dashboard/myexam');
       }
     });
   }

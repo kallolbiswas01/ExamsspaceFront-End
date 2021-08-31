@@ -16,10 +16,12 @@
             <div id="dashboard" class="collapse show" data-parent="#accordion">
              <div class="drop-menu">
               <ul>
-                <li><a [routerLink]="['/student/livetest']" class="active">Dashboard</a></li>
-                <li><a [routerLink]="['/assessment']">My Exams</a></li>
-                <li><a href="#">Live Tests</a></li>
-                <li><a href="#">Notes & Resources</a></li>
+                <!-- <li><a [routerLink]="['/student/livetest']" class="active">Dashboard</a></li> -->
+                <!-- <li><a [routerLink]="['/assessment']">My Exams</a></li> -->
+                <li><a routerLink="myexam">My Exams</a></li>
+                <li><a routerLink="livetest">Live Tests</a></li>
+                <li><a routerLink="notesresources">Notes & Resources</a></li>
+
               </ul>
 
              </div>
@@ -33,12 +35,12 @@
             <div id="practice" class="collapse show" data-parent="#accordion">
                 <div class="drop-menu">
                     <ul>
-                      <li><a href="#">Mentor Profile</a></li>
-                      <li><a href="#">Event Exam</a></li>
-                      <li><a href="#">Subjective/Course Exam</a></li>
-                      <li><a href="#">Bundle Exam</a></li>
+                      <li><a routerLink="mentorprofile">Mentor's Profile</a></li>
+                      <li><a routerLink="eventexam">Event Exam</a></li>
+                      <li><a routerLink="subjectivecourse">Subjective/Course Exam</a></li>
+                      <li><a routerLink="bundleexam">Bundle Exam</a></li>
                       <li><a href="#">Olympiad</a></li>
-                      <li><a href="#">365 Days - Quiz Planning</a></li>
+                      <li><a routerLink="randomquiz">365 Days - Quiz Planning</a></li>
                     </ul>
 
                    </div>
