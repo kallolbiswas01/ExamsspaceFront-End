@@ -1,0 +1,75 @@
+h1.heading {
+    font-size: 36px;
+    color: #023466;
+    font-weight: normal;
+}
+.exam-tab {
+    display: flex;
+    justify-content: center;
+    a {
+        padding:10px 30px ;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 0;
+        color: #404040;
+        &.active {
+            background: #007D55;
+            border: 1px solid #007D55;
+            color: #ffffff;
+            font-size: 16px;
+        }
+    }
+   
+}
+.whitebox {
+    background: #ffffff;
+    box-shadow: 0 0 4px rgba(204, 204, 204, 30%);
+    border-radius: 0px;
+    padding:10px ;
+    h2 {
+        font-weight: bold;
+        font-size: 20px;
+        color: #404040;
+        margin:10px 0 5px 0 ;
+    }
+    p {
+        font-weight: bold;
+        font-size: 14px;
+        color: #404040;
+        margin:0 0 0 0 ;
+        span{
+            font-weight: normal;
+        }
+
+    }
+    .buynow {
+        border: 1px solid #cccccc;
+        padding:5px 10px;
+        color: #404040;
+        text-decoration: none;
+        width:90px;
+        height:30px;
+        line-height: 18px;
+        font-size: 12px;
+        border-radius:6px; 
+        &:hover {
+            background: #007D55;
+            color: #ffffff;
+        }
+    }
+    .price {
+        .pricelbl{
+            font-size: 28px;
+            color: #B01F24;
+        }
+        .strike{
+            font-size: 15px;
+            color: #404040;
+            text-decoration: line-through;
+        }
+        .off{
+            font-size: 15px;
+            color: #404040;
+        }
+    }
+}
