@@ -12,6 +12,7 @@ import { SubjectivecourseComponent } from './student/subjectivecourse/subjective
 import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
 import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
 import { OlympiadComponent } from './student/olympiad/olympiad.component';
+import { EventexamComponent } from './student/eventexam/eventexam.component';
 
 const routes: Routes = [
 
@@ -38,6 +39,10 @@ const routes: Routes = [
     {
       path: 'mentorprofile',
       component: MentorsComponent, 
+    },
+    {
+      path: 'eventexam',
+      component: EventexamComponent, 
     },
     {
       path: 'subjectivecourse',

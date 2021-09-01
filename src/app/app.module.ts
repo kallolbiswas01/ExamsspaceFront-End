@@ -26,6 +26,7 @@ import { HeaderComponent } from './header/header.component';
 import { MyexamsComponent } from './student/myexams/myexams.component';
 import { StudentmenuComponent } from './student/studentmenu/studentmenu.component';
 import { OlympiadComponent } from './student/olympiad/olympiad.component';
+import { EventexamComponent } from './student/eventexam/eventexam.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { OlympiadComponent } from './student/olympiad/olympiad.component';
     HeaderComponent,
     MyexamsComponent,
     StudentmenuComponent,
-    OlympiadComponent
+    OlympiadComponent,
+    EventexamComponent
     
   ],
   imports: [

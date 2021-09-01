@@ -1,0 +1,15 @@
+
+<h1 class="heading">Event Exams</h1>
+<div class="row mt-3">
+    <div class="col-lg-4 col-md-4 col-12" *ngFor="let item of eventData">
+        <div class="whitebox">
+                <div class="mr-3"> 
+                        <img [src]="item.eventImg">
+                    </div>
+                    <h2>{{item.heading}}</h2>
+                    <p><strong>{{item.eventName}}</strong></p>
+                    <p><strong>Location</strong>{{item.location}}</p>
+                    <a href="#" class="joinnow">JOIN NOW</a>
+        </div>
+    </div>
+    </div>

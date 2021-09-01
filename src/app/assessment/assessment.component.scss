@@ -37,7 +37,13 @@ h1.heading {
         margin-top:20px ;
         }
         .quiz-area {
-
+            p{
+                font-weight: bold;
+                font-size: 14px;
+                span {
+                    font-weight: normal;
+                }
+            }
         }
     }
     .ques-time {
@@ -73,15 +79,4 @@ h1.heading {
 .border-bread {
     border-bottom: 1px solid #F2F2F2;
     padding-bottom:10px ;
-}
-ul.choices  {
-    padding-left: 0;
-    margin-left: 0;
-li {
-    list-style: none;
-    span {
-        margin-left:10px;
-    }
-  
-}
 }

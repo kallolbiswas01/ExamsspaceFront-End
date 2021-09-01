@@ -1,0 +1,45 @@
+h1.heading {
+    font-size: 36px;
+    color: #023466;
+    font-weight: normal;
+}
+
+.whitebox {
+    background: #ffffff;
+    box-shadow: 0 0 4px rgba(204, 204, 204, 30%);
+    border-radius: 0px;
+    padding:10px ;
+    h2 {
+        font-weight: bold;
+        font-size: 20px;
+        color: #007D55;
+        margin:10px 0 5px 0 ;
+    }
+    p {
+        font-weight: normal;
+        font-size: 14px;
+        color: #404040;
+        margin:0 0 0 0 ;
+        span{
+            font-weight: normal;
+        }
+
+    }
+    .joinnow {
+        border: 1px solid #cccccc;
+        padding:5px 10px;
+        color: #404040;
+        text-decoration: none;
+        width:90px;
+        height:30px;
+        line-height: 18px;
+        font-size: 12px;
+        border-radius:6px; 
+        margin-top: 10px;
+        &:hover {
+            background: #007D55;
+            color: #ffffff;
+        }
+    }
+ 
+}
