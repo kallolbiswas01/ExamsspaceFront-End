@@ -9,6 +9,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { PlaceholderDirective } from './placeholder.directive';
 import { FormsModule } from '@angular/forms';
+import { ViewassessmentComponent } from './viewassessment/viewassessment.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     CheckboxComponent,
     TextareaComponent,
     PlaceholderDirective,
+    ViewassessmentComponent,
   ],
   imports: [
     CommonModule,
