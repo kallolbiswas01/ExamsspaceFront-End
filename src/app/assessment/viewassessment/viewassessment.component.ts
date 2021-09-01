@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-viewassessment',
   templateUrl: './viewassessment.component.html',
-  styleUrls: ['./viewassessment.component.css']
+  styleUrls: ['./viewassessment.component.scss']
 })
 export class ViewassessmentComponent implements OnInit {
 
