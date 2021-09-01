@@ -1,8 +1,8 @@
 export class Question {
     option: string;
-    answer:string
     label: string;
-    value: [];
+    value: any;
     description: string;
     _id: string;
 }
+

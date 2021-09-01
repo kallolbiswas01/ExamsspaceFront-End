@@ -55,16 +55,15 @@
                 <!-- <ng-template appPlaceholder></ng-template> -->
                 <p> {{quiz?.description}}</p>
                 <ng-container *ngIf="quiz?.option ==='radio'">
-                  <p *ngFor="let opc of quiz?.value">
-                    <input type="radio" [value]="opc.name" [name]="opc.name" id="opc" [(ngModel)]="quiz.answer"
-                      (change)="onRadioChange(quiz)">
-                      <span>{{opc?.name}}</span>
+                  <p *ngFor="let opc of quiz?.value ;let i = index">
+                    <input type="radio" [value]="opc.name" [checked]="opc.checked == true" name="radiogroup" id="{{quiz._id}}-{{i}}" (change)="onRadioChange(quiz,i)" />
+                    <span>{{opc.name}}</span>
                   </p>
                 </ng-container>
                 <ng-container *ngIf="quiz?.option ==='checkbox'">
                   <p *ngFor="let opc of quiz?.value; let i = index">
-                    <input type="checkbox" [(ngModel)]="opc.checked" name="opc{{i}}" (change)="onCheckBoxChange()"/>
-                    <span>{{opc?.name}}</span>
+                    <input type="checkbox" [(ngModel)]="opc.checked" />
+                    <span>{{opc.name}}</span>
                   </p>
                 </ng-container>
 

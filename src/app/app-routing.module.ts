@@ -17,6 +17,10 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  {
+    path: 'assessment',
+    loadChildren: () =>     import('./assessment/assessment.module').then(m => m.AssessmentModule)
+  },
   { path: 'dashboard', component: DashboardComponent,
   children: [
     {
@@ -50,7 +54,8 @@ const routes: Routes = [
     {
       path: 'olympiad',
       component: OlympiadComponent, 
-    },
+    }
+
   ],
 
 }
@@ -59,10 +64,7 @@ const routes: Routes = [
 //   { path: 'student/livetest', component: LivetestComponent },
 //   { path: 'student/notesresources', component: NotesresourcesComponent },
 // ]
-//   {
-//     path: 'assessment',
-//     loadChildren: () =>     import('./assessment/assessment.module').then(m => m.AssessmentModule)
-//  },
+
 //   { path: 'register', component: RegisterComponent },
 //   { path: 'student/livetest', component: LivetestComponent},
 //   { path: 'student/notesresources', component: NotesresourcesComponent}

@@ -12,14 +12,17 @@ import { TextareaComponent } from './textarea/textarea.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { PlaceholderDirective } from './placeholder.directive';
 import { Question } from './question';
+
+
 @Component({
   selector: 'app-assessment',
   templateUrl: './assessment.component.html',
   styleUrls: ['./assessment.component.scss'],
 })
 export class AssessmentComponent implements OnInit {
-  quizs: any;
-  quiz: any;
+  quizs: Question[];
+  quiz: Question;
+  ques:any
   @ViewChild(PlaceholderDirective) placeholderDirective: PlaceholderDirective;
   private _component: any;
   public totalQuesCount:number = 0;
@@ -50,8 +53,8 @@ export class AssessmentComponent implements OnInit {
       if (res.type === 'success') {
         this.quizs = res.data;
         this.quiz = this.quizs[0];
-        this.totalQuesCount = res.totalCount,
-        this.currentQuestionNumber = 1
+        this.totalQuesCount = res.totalCount;
+        this.currentQuestionNumber = 1;
         //this.router.navigateByUrl('dashboard');
        // this.loadTabComponent(this.quiz.option);
       }
@@ -111,15 +114,25 @@ export class AssessmentComponent implements OnInit {
    ********************************************/
   submitAssessment(){
     alert("Do you want to submit?");
-  }
-  
-  onRadioChange(item:any){    
-    this.quizs[this.quizs.findIndex((data: { _id: string; }) => data._id === item._id)].answer = item.answer;
-  }
-  onCheckBoxChange(){
-    this.quizs.map((data: { isChecked: any; value: { name: string; }; }, index: string | number) => {
-      if(data.isChecked)
-        this.quizs[index].answer = this.quizs[index].answer +','+ data.value.name
+    this.assessmentService.submitAssessment(this.quizs).subscribe((data) => {
+      console.log('Assessment', data);
+      let res = <any>data;
+      if (res.type === 'success') {
+        this.quizs = res.data;
+        this.quiz = this.quizs[0];
+        this.totalQuesCount = res.totalCount;
+        this.currentQuestionNumber = 1;
+        // this.loadTabComponent(this.quiz.option);
+      }
     });
   }
+  
+  onRadioChange(item:Question,index:number){    
+    console.log(this.ques)
+    this.quizs[this.quizs.findIndex((data: { _id: string; }) => data._id === item._id)].value[index].checked = true;
+  }
+
+  // onCheckBoxChange(item:any){    
+    
+  // }
 }
