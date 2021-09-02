@@ -10,7 +10,16 @@ export class LivetestComponent implements OnInit {
 
   constructor() { }
 
+  public livetestData = [
+    {"eventImg":"/assets/img/livetest1.png","eventCompany":"ExamsSpace","eventName":"Innovation Challenge","day":
+  ["04", "11", "18"]
+  },
+  {"eventImg":"/assets/img/livetest2.png","eventCompany":"IBM","eventName":"Reimagine Future","day":
+  ["04", "11", "18"]
+  }
   
+  ];
+
 
   // private getDismissReason(reason: any): string {
   //   if (reason === ModalDismissReasons.ESC) {

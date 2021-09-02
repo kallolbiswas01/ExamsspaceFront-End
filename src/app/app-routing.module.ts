@@ -13,11 +13,13 @@ import { BundleexamComponent } from './student/bundleexam/bundleexam.component';
 import { RandomquizComponent } from './student/randomquiz/randomquiz.component';
 import { OlympiadComponent } from './student/olympiad/olympiad.component';
 import { EventexamComponent } from './student/eventexam/eventexam.component';
+import { ViewassessmentComponent } from './assessment/viewassessment/viewassessment.component';
 
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  // { path: '', component: ViewassessmentComponent },
   {
     path: 'assessment',
     loadChildren: () =>     import('./assessment/assessment.module').then(m => m.AssessmentModule)
