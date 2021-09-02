@@ -109,16 +109,13 @@ export class AssessmentComponent implements OnInit {
    * date:30/08/2021
    ********************************************/
   submitAssessment(){
-    alert("Do you want to submit?");
+     alert("Do you want to submit?");
     this.assessmentService.submitAssessment(this.quizs).subscribe((data) => {
       console.log('Assessment', data);
       let res = <any>data;
       if (res.type === 'success') {
         this.quizs = res.data;
-        // this.quiz = this.quizs[0];
-        // this.totalQuesCount = res.totalCount;
-        // this.currentQuestionNumber = 1;
-        // this.loadTabComponent(this.quiz.option);
+        this.router.navigateByUrl('assessment/result');
       }
     });
   }
@@ -128,8 +125,8 @@ export class AssessmentComponent implements OnInit {
     this.quizs[this.quizs.findIndex((data: { _id: string; }) => data._id === item._id)].value[index].checked = true;
   }
 
-  gotoViewAssessment(){
-    this.router.navigateByUrl('assessment/result');
-  }
+  // gotoViewAssessment(){
+  //   this.router.navigateByUrl('assessment/result');
+  // }
 
 }
