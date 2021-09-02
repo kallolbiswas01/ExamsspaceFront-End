@@ -135,4 +135,21 @@ export class AssessmentComponent implements OnInit {
   // onCheckBoxChange(item:any){    
     
   // }
+
+  /******************************************
+   * functionName:   getAssessmentResult(){ 
+   * input: []
+   * output: 
+   * owner: Sushil Yadav
+   * date:30/08/2021
+   ********************************************/
+  getAssessmentResult() {
+    this.assessmentService.getAssessmentResult().subscribe((data) => {
+      console.log('Assessment', data);
+      let res = <any>data;
+      if (res.type === 'success') {
+
+      }
+    });
+  }
 }

@@ -13,7 +13,8 @@ export class AssessmentService extends CommonService {
   }
 
   public getAssessmenturl = "api/assessment/question/list";
-  public submitAssesmentUrl = "api/assessment/question/submit"
+  public submitAssesmentUrl = "api/assessment/question/submit";
+  public getAssessmentResultUrl = "api/assessment/result/list";
    /**
    * funcation name:
    * craeted by:
@@ -26,6 +27,10 @@ export class AssessmentService extends CommonService {
 
   public submitAssessment(reqObj:any){
     return this.http.post(`${this.getAppBaseUrl()}${this.submitAssesmentUrl}`,reqObj,this.getConfig())
+  }
+
+  getAssessmentResult(){
+    return this.http.get(`${this.getAppBaseUrl()}${this.getAssessmentResultUrl}`,this.getConfig())
   }
 }
 
