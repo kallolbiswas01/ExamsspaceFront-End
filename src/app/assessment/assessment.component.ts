@@ -1,10 +1,4 @@
-import {
-  Component,
-  ComponentFactoryResolver,
-  OnInit,
-  ViewChild,
-  ViewContainerRef,
-} from '@angular/core';
+import {  Component,  ComponentFactoryResolver,  OnInit,  ViewChild,  ViewContainerRef,} from '@angular/core';
 import { AssessmentService } from './assessment.service';
 import { InputComponent } from './input/input.component';
 import { RadioComponent } from './radio/radio.component';
@@ -12,6 +6,7 @@ import { TextareaComponent } from './textarea/textarea.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { PlaceholderDirective } from './placeholder.directive';
 import { Question } from './question';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -32,7 +27,8 @@ export class AssessmentComponent implements OnInit {
 
   constructor(
     private assessmentService: AssessmentService,    
-    private cfr: ComponentFactoryResolver
+    private cfr: ComponentFactoryResolver,
+    private router : Router
   ) {}
 
 
@@ -132,24 +128,8 @@ export class AssessmentComponent implements OnInit {
     this.quizs[this.quizs.findIndex((data: { _id: string; }) => data._id === item._id)].value[index].checked = true;
   }
 
-  // onCheckBoxChange(item:any){    
-    
-  // }
-
-  /******************************************
-   * functionName:   getAssessmentResult(){ 
-   * input: []
-   * output: 
-   * owner: Sushil Yadav
-   * date:30/08/2021
-   ********************************************/
-  getAssessmentResult() {
-    this.assessmentService.getAssessmentResult().subscribe((data) => {
-      console.log('Assessment', data);
-      let res = <any>data;
-      if (res.type === 'success') {
-
-      }
-    });
+  gotoViewAssessment(){
+    this.router.navigateByUrl('assessment/result');
   }
+
 }
