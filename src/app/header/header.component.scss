@@ -73,6 +73,30 @@
         margin-right: 10px;
 
        }
+       
+    }
+    .username {
+        font-size: 14px;
+        color: #ffffff;
+    }
+    .notifications {
+        .fa {
+         font-size: 18px;
+         color: #ffffff; 
+         margin-left: 10px;
+        }
+        strong {
+            background: #FCCC31;
+            color: #000000;
+            padding: 2px 6px;
+            height: 15px;
+            width: 45px;
+            border-radius: 30px;
+            font-size: 12px;
+            position: relative;
+            top: -10px;
+            left: -8px;
+        }
     }
     .menu {
 
