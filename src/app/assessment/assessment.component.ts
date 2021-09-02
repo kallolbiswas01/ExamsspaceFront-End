@@ -115,9 +115,9 @@ export class AssessmentComponent implements OnInit {
       let res = <any>data;
       if (res.type === 'success') {
         this.quizs = res.data;
-        this.quiz = this.quizs[0];
-        this.totalQuesCount = res.totalCount;
-        this.currentQuestionNumber = 1;
+        // this.quiz = this.quizs[0];
+        // this.totalQuesCount = res.totalCount;
+        // this.currentQuestionNumber = 1;
         // this.loadTabComponent(this.quiz.option);
       }
     });
