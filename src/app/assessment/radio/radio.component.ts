@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
-import { Question } from '../question';
+import { Question } from "../models/index";
+
 @Component({
   selector: 'app-radio',
   templateUrl: './radio.component.html',

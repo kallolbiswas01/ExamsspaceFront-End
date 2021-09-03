@@ -1,13 +1,18 @@
-import {  Component,  ComponentFactoryResolver,  OnInit,  ViewChild,  ViewContainerRef,} from '@angular/core';
+import {
+  Component,
+  ComponentFactoryResolver,
+  OnInit,
+  ViewChild,
+  ViewContainerRef,
+} from '@angular/core';
 import { AssessmentService } from './assessment.service';
 import { InputComponent } from './input/input.component';
 import { RadioComponent } from './radio/radio.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { PlaceholderDirective } from './placeholder.directive';
-import { Question } from './question';
 import { Router } from '@angular/router';
-
+import { Question, QuizConfig } from './models/index';
 
 @Component({
   selector: 'app-assessment',
@@ -17,26 +22,34 @@ import { Router } from '@angular/router';
 export class AssessmentComponent implements OnInit {
   quizs: Question[];
   quiz: Question;
-  ques:any
+  ques: any;
+
+  config: QuizConfig = {
+    duration: 1800
+  };
+  timer: any = null;
+  startTime: Date;
+  endTime: Date;
+  ellapsedTime = '00:00';
+  duration = '';
+
   @ViewChild(PlaceholderDirective) placeholderDirective: PlaceholderDirective;
   private _component: any;
-  public totalQuesCount:number = 0;
+  public totalQuesCount: number = 0;
   public currentQuestionNumber: number = 0;
   checkedQuizList: any;
 
-
   constructor(
-    private assessmentService: AssessmentService,    
+    private assessmentService: AssessmentService,
     private cfr: ComponentFactoryResolver,
-    private router : Router
+    private router: Router
   ) {}
 
-
   ngOnInit(): void {
-    this.getAssessment();
+    //this.getAssessment();
   }
   /******************************************
-   * functionName: getAssessment  
+   * functionName: getAssessment
    * input: {}
    * output: JSON
    * owner: Sushil Yadav
@@ -52,24 +65,47 @@ export class AssessmentComponent implements OnInit {
         this.totalQuesCount = res.totalCount;
         this.currentQuestionNumber = 1;
         //this.router.navigateByUrl('dashboard');
-       // this.loadTabComponent(this.quiz.option);
+        // this.loadTabComponent(this.quiz.option);
+        this.startTime = new Date();
+        this.ellapsedTime = '00:00';
+        this.timer = setInterval(() => {
+          this.tick();
+        }, 1000);
+        this.duration = this.parseTime(this.config.duration);
       }
     });
+  }
+
+  tick() {
+    const now = new Date();
+    const diff = (now.getTime() - this.startTime.getTime()) / 1000;
+    if (diff >= this.config.duration) {
+      this.submitAssessment();
+    }
+    this.ellapsedTime = this.parseTime(diff);
+  }
+
+  parseTime(totalSeconds: number) {
+    let mins: string | number = Math.floor(totalSeconds / 60);
+    let secs: string | number = Math.round(totalSeconds % 60);
+    mins = (mins < 10 ? '0' : '') + mins;
+    secs = (secs < 10 ? '0' : '') + secs;
+    return `${mins}:${secs}`;
   }
 
   loadTabComponent(_component: string) {
     switch (_component) {
       case 'textarea':
-        this._component = TextareaComponent
+        this._component = TextareaComponent;
         break;
       case 'radio':
-        this._component = RadioComponent
+        this._component = RadioComponent;
         break;
       case 'text':
-        this._component = InputComponent
+        this._component = InputComponent;
         break;
       case 'checkbox':
-        this._component = CheckboxComponent
+        this._component = CheckboxComponent;
         break;
       default:
         console.log('No such day exists!');
@@ -79,7 +115,8 @@ export class AssessmentComponent implements OnInit {
     const componentFactory = this.cfr.resolveComponentFactory(this._component);
     const viewContainerRef = this.placeholderDirective.viewContainerRef;
     viewContainerRef.clear();
-    const componentRef = viewContainerRef.createComponent<any>(componentFactory);
+    const componentRef =
+      viewContainerRef.createComponent<any>(componentFactory);
     componentRef.instance.quiz = this.quiz;
     //componentRef.instance.quizs = this.quizs;
     //this.componentsList.push(componentRef);
@@ -87,7 +124,8 @@ export class AssessmentComponent implements OnInit {
 
   previous() {
     const currentIndex = this.quizs.indexOf(this.quiz);
-    const newIndex = currentIndex === 0 ? this.quizs.length - 1 : currentIndex - 1;
+    const newIndex =
+      currentIndex === 0 ? this.quizs.length - 1 : currentIndex - 1;
     this.quiz = this.quizs[newIndex];
     this.currentQuestionNumber--;
     //this.loadTabComponent(this.quiz.option);
@@ -95,21 +133,21 @@ export class AssessmentComponent implements OnInit {
 
   next() {
     const currentIndex = this.quizs.indexOf(this.quiz);
-    const newIndex = currentIndex === this.quizs.length - 1 ? 0 : currentIndex + 1;
+    const newIndex =
+      currentIndex === this.quizs.length - 1 ? 0 : currentIndex + 1;
     this.quiz = this.quizs[newIndex];
     this.currentQuestionNumber++;
     //this.loadTabComponent(this.quiz.option);
   }
 
   /******************************************
-   * functionName:   submitAssessment(){ 
+   * functionName:   submitAssessment(){
    * input: []
-   * output: 
+   * output:
    * owner: Sushil Yadav
    * date:30/08/2021
    ********************************************/
-  submitAssessment(){
-     alert("Do you want to submit?");
+  submitAssessment() {
     this.assessmentService.submitAssessment(this.quizs).subscribe((data) => {
       console.log('Assessment', data);
       let res = <any>data;
@@ -119,14 +157,15 @@ export class AssessmentComponent implements OnInit {
       }
     });
   }
-  
-  onRadioChange(item:Question,index:number){    
-    console.log(this.ques)
-    this.quizs[this.quizs.findIndex((data: { _id: string; }) => data._id === item._id)].value[index].checked = true;
+
+  onRadioChange(item: Question, index: number) {
+    console.log(this.ques);
+    this.quizs[
+      this.quizs.findIndex((data: { _id: string }) => data._id === item._id)
+    ].value[index].checked = true;
   }
 
   // gotoViewAssessment(){
   //   this.router.navigateByUrl('assessment/result');
   // }
-
 }

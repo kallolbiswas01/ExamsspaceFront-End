@@ -29,6 +29,12 @@
             </span>
         </div>
         </div> -->
+        <div class="col-lg-6 col-md-6 col-12 text-right">
+          <div class="col-12 text-right">
+            <button class="btn btn-dark" (click)="getAssessment()">Start Test</button>
+            <button class="btn btn-success ml-2" (click)="submitAssessment()">Submit</button>
+          </div>
+        </div>
       </div>
       <div class="row timesection mt-3">
         <div class="col-lg-3 col-md-3 col-12 time">
@@ -37,12 +43,12 @@
               <h1>Question <span>{{currentQuestionNumber}}</span> of <span>{{totalQuesCount}}</span></h1>
             </div>
             <div class="quiz-repeat">
-              <h1>Time Remaining</h1>
-              <p class="remaining">08:50</p>
+              <h1>Elapsed Time</h1>
+              <p class="remaining">{{ellapsedTime}}</p>
             </div>
             <div class="quiz-repeat">
               <h1>Total Time</h1>
-              <p class="totaltime">22:10</p>
+              <p class="totaltime">{{duration}}</p>
             </div>
           </div>
         </div>
@@ -80,13 +86,13 @@
 
         </div>
       </div>
-      <div class="row p-4 result">
-        <div class="col-12 text-right">
+      <!-- <div class="row p-4 result"> -->
+        <!-- <div class="col-12 text-right"> -->
           <!-- <button class="btn btn-dark" (click)="gotoViewAssessment()">View Results</button> -->
-          <button class="btn btn-success ml-2" (click)="submitAssessment()">Submit</button>
+          <!-- <button class="btn btn-success ml-2" (click)="submitAssessment()">Submit</button> -->
           <!-- <span id="myresults">My results will appear here</span> -->
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
     </div>
   </div>
 
